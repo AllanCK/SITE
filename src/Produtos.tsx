@@ -31,13 +31,15 @@ export function ProductsView() {
   }, []);
 
   console.log(produtos);
-
+  
   return (
     <>
       <h1>Produtos</h1>
       <ul>
         {produtos.map((produto) => (
-          <li key={produto.id}>{produto.name}</li>
+          <li key={produto.id}>
+            <img className="block" src={produto.thumbnailImage} />
+          </li>
         ))}
       </ul>
     </>
